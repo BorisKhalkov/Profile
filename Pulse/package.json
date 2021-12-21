@@ -1,0 +1,35 @@
+{
+  "name": "profile",
+  "version": "0.0.1",
+  "description": "webdev lessons",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BorisKhalkov/Profile.git"
+  },
+  "keywords": [
+    "web",
+    "developer"
+  ],
+  "author": "Boris Kh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BorisKhalkov/Profile/issues"
+  },
+  "homepage": "https://github.com/BorisKhalkov/Profile#readme",
+  "devDependencies": {
+    "browser-sync": "^2.27.7",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-cli": "github:gulpjs/gulp-cli",
+    "gulp-sass": "^5.0.0"
+  },
+  "dependencies": {
+    "sass": "^1.45.0"
+  },
+  "optionalDependencies": {}
+}
