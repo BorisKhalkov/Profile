@@ -14,7 +14,7 @@
     "web",
     "developer"
   ],
-  "author": "Boris Kh",
+  "author": "Boris Khalkov",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/BorisKhalkov/Profile/issues"
@@ -26,6 +26,7 @@
     "gulp-autoprefixer": "^8.0.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-cli": "github:gulpjs/gulp-cli",
+    "gulp-rename": "^2.0.0",
     "gulp-sass": "^5.0.0"
   },
   "dependencies": {
