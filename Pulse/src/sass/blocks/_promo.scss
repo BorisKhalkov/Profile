@@ -1,7 +1,7 @@
 .promo {
     min-height: 650px;
     padding: 21px 0 93px 0;
-    background: url(../../img/bg/main-bg.png) center (center/cover) no-repeat;
+    background: url(../img/bg/main-bg.png) center (center/cover) no-repeat;
     &__wrapper {
         display: flex;
         flex-direction: column;
@@ -9,6 +9,7 @@
         margin-top: 91px;
     }
     &__header {
+	    margin-right: 5px;
         font-weight: 700;
         font-size: 42px;
         text-transform: uppercase;
@@ -16,6 +17,7 @@
         line-height: 42px;
     }
     &__subheader {
+        margin-right: 5px;
         margin-top: 17px;
         font-weight: 500;
         font-size: 24px;
@@ -24,6 +26,7 @@
         line-height: 24px;
     }
     &__icons {
+        margin-right: 5px;
         margin-top: 60px;
         width: 425px;
         display: flex;
@@ -43,6 +46,7 @@
         }
     }
     &__link {
+        margin-right: 5px;
         margin-top: 16px;
         font-weight: 500;
         font-size: 16px;
