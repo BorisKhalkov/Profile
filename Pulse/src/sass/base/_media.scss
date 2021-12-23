@@ -23,6 +23,19 @@
 			margin-top: 16px;
 		}
 	}
+	.advantages {
+		&__icons {
+			width: 100%;
+			flex-direction: column;
+			align-items: center;
+		}
+		&__title {
+			margin-top: 16px;
+		}
+		&__descr {
+			margin-bottom: 32px;
+		}
+	}
 }
 
 @media (max-width: 432px) {
@@ -69,6 +82,11 @@
 			text-align: center;
 		}
 	}
+	.advantages {
+		.title {
+			font-size: 26px;
+		}
+	}
 }
 @media (max-width: 320px) {
 	.header {
@@ -93,6 +111,11 @@
 		.button__main {
 			width: 240px;
 			font-size: 14px;
+		}
+	}
+	.advantages {
+		.title {
+			font-size: 20px;
 		}
 	}
 }
