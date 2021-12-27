@@ -14,7 +14,7 @@
 			margin: 0 auto;
 			margin-top: 60px;
 		}
-		.button__main {
+		.button_main {
 			margin: 0 auto;
 			margin-top: 76px;
 		}
@@ -34,6 +34,35 @@
 		}
 		&__descr {
 			margin-bottom: 32px;
+		}
+	}
+
+	.consultation {
+		.title {
+			&_left{
+			text-align: center;
+			}
+		}
+		&__descr {
+			text-align: center;
+		}
+		.feed-form {
+			margin: 0 auto;
+			margin-top: 36px;
+		}
+	}
+	.carousel {
+		&__inner {
+			width: 100%;
+			img {
+				margin: 0 auto;
+				width: 650px;
+			}
+		}
+		.slick-prev, .slick-next {
+			img {
+				display: none;
+			}
 		}
 	}
 }
@@ -87,7 +116,24 @@
 			font-size: 26px;
 		}
 	}
+	.consultation {
+		.title {
+			&_left {
+				font-size: 26px;
+				line-height: 36px;
+			}
+
+		}
+	}
+	.carousel {
+		&__inner {
+			img {
+				width: 400px;
+			}
+		}
+	}
 }
+
 @media (max-width: 320px) {
 	.header {
 		&__phone {
@@ -108,7 +154,7 @@
 				width: 25px;
 			}
 		}
-		.button__main {
+		.button_main {
 			width: 240px;
 			font-size: 14px;
 		}
@@ -116,6 +162,28 @@
 	.advantages {
 		.title {
 			font-size: 20px;
+		}
+	}
+	.consultation {
+		.title {
+			&_left {
+				padding: 0 5px;
+				font-size: 20px;
+				line-height: 26px;
+			}
+		}
+		&__descr {
+			padding: 0 5px;
+			margin-top: 24px;
+			font-size: 16px;
+			line-height: 20px;
+		}
+	}
+	.carousel {
+		&__inner {
+			img {
+				width: 300px;
+			}
 		}
 	}
 }
