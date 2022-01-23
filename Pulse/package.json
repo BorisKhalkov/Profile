@@ -22,15 +22,13 @@
   "homepage": "https://github.com/BorisKhalkov/Profile#readme",
   "devDependencies": {
     "browser-sync": "^2.27.7",
+    "dart-sass": "^1.25.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-cli": "github:gulpjs/gulp-cli",
     "gulp-rename": "^2.0.0",
-    "gulp-sass": "^5.0.0"
-  },
-  "dependencies": {
-    "sass": "^1.45.0"
-  },
-  "optionalDependencies": {}
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.49.0"
+  }
 }
