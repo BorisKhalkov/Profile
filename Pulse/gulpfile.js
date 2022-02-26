@@ -10,6 +10,7 @@ sass.compiler      = require('sass');
 gulp.task('server', function() {
 
 	browserSync({
+		host: "192.168.1.105",
 		server: {
 			baseDir: "src"
 		}
