@@ -6,11 +6,11 @@
 		margin-top: 65px;
 		display: flex;
 		justify-content: space-between;
-		width: 950px;
+		max-width: 950px;
 	}
 	&__icon {
 		display: block;
-		width: 275px;
+		max-width: 30%;
 		text-align: center;
 	}
 	img {
@@ -34,6 +34,12 @@
 		a {
 			text-decoration-line: underline;
 			color: #FF0000;
+		}
+	}
+	&__heartbeat {
+		animation: heartbeat 1.5s ease-in-out infinite;
+		&:hover {
+			animation-play-state: paused;
 		}
 	}
 }
