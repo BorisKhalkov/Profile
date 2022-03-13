@@ -165,6 +165,38 @@
 				transform: skewX(0);
 			}
 		}
+		&-item {
+			&__content {
+				margin-left: 0px;
+			}
+			&__descr {
+				font-size: 12px;
+				line-height: 14px;
+			}
+			&__list li {
+				width: 110%;
+				font-size: 9px;
+				line-height: 10px;
+				left: -20px;
+				&::before {
+					content: '';
+					position: absolute;
+					width: 5px;
+					height: 5px;
+					background-color: $main-color;
+					left: -13.5px;
+					top: 8.5px;
+				}
+			}
+			&__link {
+				margin-top: 20px;
+				font-size: 10px;
+			}
+			&__back {
+				bottom: -40px;
+				font-size: 10px;
+			}
+		}
 		&__content {
 			margin-top: 32px;
 		}
@@ -188,6 +220,10 @@
 		&__info {
 			width: 100%;
 		}
+	}
+	.pageup {
+		right: 10px;
+		bottom: 10px;
 	}
 }
 
@@ -236,6 +272,9 @@
 			font-size: 12px;
 			line-height: 18px;
 		}
+	}
+	.catalog-item__list li {
+		font-size: 12px;
 	}
 	.footer {
 		font-size: 14px;
