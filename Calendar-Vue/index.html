@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Календарь задач на Vue.js</title>
+	<link rel="stylesheet" href="libs/uikit.css">
+	<script src="libs/uikit.js"></script>
+	<script src="libs/uikit-icons.js"></script>
+	<script src="libs/vue.js"></script>
+	<script src="libs/date-utils.js"></script>
+
+	<style>
+		.calendar-item {
+			width: calc(100% / 7);
+		}
+	</style>
+
+</head>
+<body>
+	<div id="app" class="uk-container uk-container-large">
+		<calendar></calendar>
+	</div>
+	
+	<template id="calendarTpl">
+		<div class="uk-flex uk-flex-wrap">
+			<div v-for="i in days" class="calendar-item">{{i}}</div>
+		</div>
+	</template>
+
+	<script src="components/calendar.js"></script>
+	<script src="app.js"></script>
+</body>
+</html>
