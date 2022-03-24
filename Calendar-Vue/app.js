@@ -1,7 +1,8 @@
 const app = {
-  components: {
-    calendar,
-  }
+	components: {
+		calendar,
+		calendarSelector,
+	}
 }
 
 Vue.createApp(app).mount('#app')
