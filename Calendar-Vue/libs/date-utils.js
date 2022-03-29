@@ -42,3 +42,12 @@ assertEquals(getMonthName(0), 'январь')
 assertEquals(getMonthName(3), 'апрель')
 assertEquals(getMonthName(7), 'август')
 assertEquals(getMonthName(11), 'декабрь')
+
+function getISODate(date) {
+	const d = new Date(date)
+	d.setMinutes(d.getUTCMinutes() - d.getTimezoneOffset())
+	return d.toISOString().split('T')[0]
+}
+
+assertEquals(getISODate(new Date(2022, 2, 29)), '2022-03-29')
+assertEquals(getISODate(new Date(2021, 4, 9)), '2021-05-09')
