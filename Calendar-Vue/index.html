@@ -58,7 +58,7 @@
 	</template>
 
 	<template id="taskFormTpl">
-		<form id="task-form" uk-modal ref="form">
+		<form id="task-form" uk-modal ref="form" @submit:prevent="save">
 			<div class="uk-modal-dialog" uk-overflow-auto>
 				<div class="uk-card-header">
 					<h2 class="uk-card-title">Добавить задачу</h2>
