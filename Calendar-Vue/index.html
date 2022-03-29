@@ -26,7 +26,7 @@
 	<template id="calendarTpl">
 		<calendar-selector class="uk-margin-small calendar"></calendar-selector>
 		<div class="uk-flex uk-flex-wrap">
-			<div v-for="(_, i) in 7" class="calendar-item">{{weekday(i)}}</div>
+			<div v-for="(_, i) in 7" class="calendar-item uk-text-uppercase">{{weekday(i)}}</div>
 			<div v-for="i in days" class="calendar-item">{{i}}</div>
 		</div>
 	</template>
@@ -37,6 +37,9 @@
 			<span class="uk-text-bold uk-text-center uk-text-uppercase uk-width-1-6 uk-inline-block">{{getMonthTitle()}}</span>
 			<button class="uk-margin-small-left" uk-icon="chevron-right" @click="nextMonth"></button>
 			
+			<button class="uk-margin-small-right" uk-icon="chevron-left" @click="prevYear"></button>
+			<span class="uk-text-bold uk-text-center uk-text-uppercase uk-width-1-6 uk-inline-block">{{getYear()}}</span>
+			<button class="uk-margin-small-left" uk-icon="chevron-right" @click="nextYear"></button>
 		</div>
 	</template>
 

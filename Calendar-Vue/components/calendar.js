@@ -10,7 +10,7 @@ const calendar = {
 		const daysInMonth = getDaysOfMonth(month, year)
 		const firstDayIndex = getFirstWeekDay(month, year)
 		const days = []
-		for (let i = firstDayIndex; i < daysInMonth; i++) {
+		for (let i = firstDayIndex; i < daysInMonth + firstDayIndex; i++) {
 			days[i] = i + 1 - firstDayIndex
 		}
 		return {
