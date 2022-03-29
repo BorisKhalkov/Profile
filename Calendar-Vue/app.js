@@ -1,7 +1,9 @@
 const app = {
 	components: {
 		calendar,
-		calendarSelector,
+	},
+	data() {
+		return state
 	}
 }
 

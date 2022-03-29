@@ -1,38 +1,26 @@
 const calendarSelector = {
 	template: calendarSelectorTpl.innerHTML,
-	data() {
-		return {
-			date: new Date()
-		}
-	},
+	props: ['date'],
 	methods: {
 		getMonthTitle() {
 			return getMonthName(this.date.getMonth())
 
 		},
 		nextMonth() {
-			const date = new Date(this.date)
-			date.setMonth(this.date.getMonth() + 1)
-			this.date = date
+			state.updateCalendarDateMonth(1)
 		},
 		prevMonth() {
-			const date = new Date(this.date)
-			date.setMonth(this.date.getMonth() - 1)
-			this.date = date
+			state.updateCalendarDateMonth(-1)
 		},
 
 		getYear() {
 			return this.date.getFullYear()
 		},
 		nextYear() {
-			const date = new Date(this.date)
-			date.setFullYear(this.date.getFullYear() + 1)
-			this.date = date
+			state.updateCalendarYear(1)
 		},
 		prevYear() {
-			const date = new Date(this.date)
-			date.setFullYear(this.getFullYear() - 1)
-			this.date = date
+			state.updateCalendarYear(-1)
 		}
 	},
 }
