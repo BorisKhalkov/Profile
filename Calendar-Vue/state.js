@@ -24,7 +24,7 @@ const state = Vue.reactive({
 	addTask(formModel) {
 		const date = new Date(formModel.date)
 		date.setHours(formModel.hours)
-		date.getMinutes(formModel.minutes)
+		date.setMinutes(formModel.minutes)
 
 		const task = new Task(date)
 		task.title = formModel.title
