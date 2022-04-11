@@ -8,4 +8,6 @@ const app = {
 	}
 }
 
-Vue.createApp(app).mount('#app')
+const vueApp = Vue.createApp(app)
+vueApp.config.globalProperties.$state = state
+vueApp.mount('#app')

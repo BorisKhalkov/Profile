@@ -3,14 +3,37 @@ class Task {
 	descr = ''
 	finished = false
 
-	constructor (date) {
+	constructor(date) {
 		this.date = date
 	}
 }
+
+function saveTasksToStore(tasks) {
+	const tasksString = JSON.stringify(tasks)
+	console.log(tasksString)
+	localStorage.setItem('tasks', tasksString)
+}
+
+function loadTasksFromStore() {
+	let tasks = []
+	try {
+		tasks = JSON.parse(localStorage.getItem('tasks'))
+	} catch (e) {
+		console.error(e)
+	}
+	for (let i = 0; i < tasks.length; i++) {
+		const task = tasks[i]
+		task.date = new Date(task.date)
+	}
+	return tasks
+}
+
 const state = Vue.reactive({
 	calendarDate: new Date(),
 	newTask: null,
-	tasks: [],
+	editTask: null,
+	showTasks: [],
+	tasks: loadTasksFromStore(),
 	updateCalendarDateMonth(diff) {
 		const date = new Date(this.calendarDate)
 		date.setMonth(date.getMonth() + diff)
@@ -21,16 +44,38 @@ const state = Vue.reactive({
 		date.setFullYear(date.getFullYear() + diff)
 		this.calendarDate = date
 	},
+	setEditTask(task) {
+		this.editTask = {task}
+	},
 	addTask(formModel) {
-		const date = new Date(formModel.date)
-		date.setHours(formModel.hours)
-		date.setMinutes(formModel.minutes)
+		const task = new Task(null)
+		this.updateTaskWithDate(formModel, task)
+		this.tasks = this.tasks.concat([task])
+		saveTasksToStore(this.tasks)
+	},
+	updateTask(formModel, task) {
+		this.updateTaskWithDate(formModel, task)
+		this.tasks = this.tasks.concat([])
+		saveTasksToStore(this.tasks)
+	},
+	updateTaskWithDate (formModel, task) {
+		const taskDate = new Date(formModel.date)
+		taskDate.setHours(formModel.hours)
+		taskDate.setMinutes(formModel.minutes)
 
-		const task = new Task(date)
+		task.date = taskDate
 		task.title = formModel.title
 		task.descr = formModel.descr
 		task.finished = formModel.finished
-
-		this.tasks = this.tasks.concat([task])
+	},
+	removeTask(task) {
+		const index = this.tasks.indexOf(task)
+		if (index < 0) {
+			console.error(`failed to remove task: ${task}`)
+			return
+		}
+		this.tasks.splice(index,1)
+		this.tasks = this.tasks.concat([])
+		saveTasksToStore(this.tasks)
 	}
 })
